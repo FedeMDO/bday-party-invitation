@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { AddToGoogleCalendarButton } from './AddToGoogleCalendarButton';
 import { InvitationInfo } from '../types';
 import { useSearchParams } from 'next/navigation';
