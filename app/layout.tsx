@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="mx-2 flex h-screen flex-col items-center justify-center bg-[url('https://i.makeagif.com/media/9-15-2023/MxD5uP.gif')] bg-center">
+        <div className="mx-2 flex min-h-screen flex-col items-center justify-center bg-[url('https://i.makeagif.com/media/9-15-2023/MxD5uP.gif')] bg-center">
           <div className="flex w-full max-w-xl flex-col items-center justify-evenly rounded-lg bg-black bg-opacity-50 py-5 shadow-lg">
             <div className="mb-5">
               <BackgroundMusicButton />

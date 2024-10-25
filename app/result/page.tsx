@@ -13,12 +13,14 @@ type PageProps = {
 export default async function Page({ searchParams }: PageProps) {
   const { answer } = await searchParams;
   const invitationInfoPromise = getInvitationInfo();
-
-  const result = await getResult(answer as string[]);
+  const resultPromise = getResult(answer as string[]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {result ? <SuccessCard invitationInfoPromise={invitationInfoPromise} /> : <div>Perdiste 😢</div>}
-    </Suspense>
+    <div className="mx-4 flex flex-col items-center justify-center">
+      <h1 className="mb-4 text-3xl font-bold">Resultado:</h1>
+      <Suspense fallback={<div className="min-h-96 animate-pulse text-4xl">Cargando resultado...</div>}>
+        <SuccessCard resultPromise={resultPromise} invitationInfoPromise={invitationInfoPromise} />
+      </Suspense>
+    </div>
   );
 }

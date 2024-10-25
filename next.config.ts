@@ -12,11 +12,6 @@ const nextConfig: NextConfig = {
         permanent: true,
         source: '/',
       },
-      {
-        destination: '/result',
-        permanent: true,
-        source: '/6',
-      },
     ];
   },
 };

@@ -13,6 +13,7 @@ export default function QuestionStep({ questionPromise, nextQuestion }: Props) {
   const question = use(questionPromise);
   const router = useRouter();
   const searchParams = useSearchParams();
+  const isLastQuestion = nextQuestion === '6';
 
   return (
     <div className="animate-wiggle mb-4 flex flex-col rounded-full bg-pink-400 bg-opacity-60">
@@ -31,7 +32,8 @@ export default function QuestionStep({ questionPromise, nextQuestion }: Props) {
               const questionAndOption = `${question.id}-${index}`;
               const newSearchParams = new URLSearchParams(searchParams.toString());
               newSearchParams.append('answer', questionAndOption);
-              router.push(`/${nextQuestion}?${newSearchParams.toString()}`, {
+
+              router.push(`/${isLastQuestion ? 'result' : nextQuestion}?${newSearchParams.toString()}`, {
                 scroll: false,
               });
             }}

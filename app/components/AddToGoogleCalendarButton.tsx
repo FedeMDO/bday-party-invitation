@@ -1,13 +1,17 @@
 import React from 'react';
+import { InvitationInfo } from '../types';
 
-// The AddToGoogleCalendar component
-export const AddToGoogleCalendarButton = () => {
+type Props = {
+  invitationInfo: InvitationInfo;
+};
+
+export const AddToGoogleCalendarButton = ({ invitationInfo }: Props) => {
   const eventTitle = 'Cumple de Fede';
-  const location = 'Lugar secreto';
-  const description = `Cumple de Fede - ¡No te lo pierdas!`;
+  const location = invitationInfo.location;
+  const description = invitationInfo.additionalInfo;
 
-  const formattedStartDate = '20241118T110000Z';
-  const formattedEndDate = '20241118T190000Z';
+  const formattedStartDate = '20241118T140000Z'; // UTC time for 12 PM Argentina time
+  const formattedEndDate = '20241118T230000Z'; // UTC time for 8 PM Argentina time
 
   // Construct Google Calendar event URL
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${formattedStartDate}%2F${formattedEndDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
@@ -15,7 +19,8 @@ export const AddToGoogleCalendarButton = () => {
   return (
     <a href={googleCalendarUrl} target="_blank" rel="noopener noreferrer">
       <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-        Agregar a Google Calendar 📅
+        <p className="inline-block animate-spin">📅</p> Agregar a Calendar{' '}
+        <p className="inline-block animate-spin">📅</p>
       </button>
     </a>
   );

@@ -36,7 +36,6 @@ export const PERSONAL_QUESTIONS: Question[] = [
 ];
 
 export async function getQuestion(id: string) {
-  // simulate a slow network
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 500));
   return PERSONAL_QUESTIONS.find(question => question.id === id);
 }

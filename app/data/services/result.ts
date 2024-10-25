@@ -2,7 +2,7 @@ import { PERSONAL_QUESTIONS } from './questions';
 
 export async function getResult(answers: string[]) {
   // simulate a slow network
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve => setTimeout(resolve, 2000));
   let numberOfCorrectAnswers = 0;
 
   for (const answer of answers) {
