@@ -26,6 +26,8 @@ export default function QuestionStep({ questionPromise, nextQuestion }: Props) {
             key={option}
             className="border-gray mb-2 h-10 w-52 rounded border bg-white px-4 py-2 text-black hover:bg-blue-200"
             onClick={() => {
+              const audio = new Audio('bocina-reggaeton.mp3');
+              audio.play();
               const questionAndOption = `${question.id}-${index}`;
               const newSearchParams = new URLSearchParams(searchParams.toString());
               newSearchParams.append('answer', questionAndOption);

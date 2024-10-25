@@ -15,11 +15,6 @@ export default function SuccessCard({ invitationInfoPromise }: Props) {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
 
-  useEffect(() => {
-    const audio = new Audio('bocina-reggaeton.mp3');
-    audio.play();
-  }, []);
-
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="mb-4 text-3xl font-bold">Resultado:</h1>
