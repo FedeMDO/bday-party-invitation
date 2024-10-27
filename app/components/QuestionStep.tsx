@@ -16,7 +16,7 @@ export default function QuestionStep({ questionPromise, nextQuestion }: Props) {
   const isLastQuestion = nextQuestion === '6';
 
   return (
-    <div className="animate-wiggle mb-4 flex flex-col rounded-full bg-pink-400 bg-opacity-60">
+    <div className="animate-wiggle g-opacity-60 mb-4 flex flex-col rounded-full bg-orange-500">
       <h1 className="mb-2 text-lg font-bold">
         {question?.id} - {question?.question}
       </h1>

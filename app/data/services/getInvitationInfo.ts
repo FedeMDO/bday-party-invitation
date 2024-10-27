@@ -3,7 +3,7 @@ import { InvitationInfo } from '../../types';
 export async function getInvitationInfo(): Promise<InvitationInfo> {
   const location = 'Quinta Las Violetas, C. 1455, B1888 La Capilla, Provincia de Buenos Aires, Argentina';
   const date = 'Lunes 18 de Noviembre (feriado nacional)';
-  const from = '12 del mediodia'; // 12 argentina time
+  const from = '11 del mediodia'; // 12 argentina time
   const to = '8 de la noche'; // 19 argentina time
   const additionalInfo = `Llevar bebidas 🥂🍷🍹🍻. Va a haber pileta 🩳👙. <br/>
   <br/>

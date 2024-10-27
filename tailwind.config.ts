@@ -7,7 +7,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    darkMode: 'false',
     extend: {
       colors: {
         background: 'var(--background)',

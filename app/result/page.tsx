@@ -18,7 +18,7 @@ export default async function Page({ searchParams }: PageProps) {
   return (
     <div className="mx-4 flex flex-col items-center justify-center">
       <h1 className="mb-4 text-3xl font-bold">Resultado:</h1>
-      <Suspense fallback={<div className="min-h-96 animate-pulse text-4xl">Cargando resultado...</div>}>
+      <Suspense fallback={<div className="min-h-96 animate-pulse text-center text-4xl">Cargando resultado...</div>}>
         <SuccessCard resultPromise={resultPromise} invitationInfoPromise={invitationInfoPromise} />
       </Suspense>
     </div>

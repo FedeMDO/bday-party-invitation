@@ -17,7 +17,7 @@ export const BackgroundMusicButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="mt-12 animate-bounce rounded-full bg-green-400 px-4 py-2 font-bold text-white hover:bg-green-700"
+      className="mt-12 animate-bounce rounded-full bg-green-600 px-4 py-2 font-bold text-white hover:bg-green-700"
     >
       ⏯️musiquita 🔊
     </button>

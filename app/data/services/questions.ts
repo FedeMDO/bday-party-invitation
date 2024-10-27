@@ -6,31 +6,31 @@ export const PERSONAL_QUESTIONS: Question[] = [
   {
     id: '1',
     question: 'Cual es mi segundo nombre?',
-    options: ['Alejandro', 'Miguel', 'Manuel', 'Adrian'],
-    correctAnswerIndex: 3,
+    options: ['Alejandro', 'Adrian', 'Miguel', 'Manuel'],
+    correctAnswerIndex: 1,
   },
   {
     id: '2',
     question: 'Cual es mi animal favorito?',
-    options: ['Perro', 'Gato', 'Carpincho', 'Conejo'],
+    options: ['Perro🐩', 'Gato🐈‍⬛', 'Carpincho', 'Delfin🐬'],
     correctAnswerIndex: 2,
   },
   {
     id: '3',
     question: 'De que trabajo?',
-    options: ['Contador', 'Asesor Financiero', 'Soporte en Sistemas', 'Programador'],
+    options: ['Contador🔢', 'Asesor Financiero🤑', 'Soporte en Sistemas🖥️', 'Programador👨🏽‍💻'],
     correctAnswerIndex: 3,
   },
   {
     id: '4',
     question: 'Cual es mi deporte favorito?',
-    options: ['Futbol', 'Tenis', 'Basquet', 'Natacion'],
+    options: ['Futbol⚽️', 'Tenis🎾', 'Basquet🏀', 'Natacion🏊🏼'],
     correctAnswerIndex: 3,
   },
   {
     id: '5',
     question: 'Cual es mi pasatiempo favorito?',
-    options: ['Ir al gym', 'Jugar videojuegos', 'Ver series', 'Escuchar musica'],
+    options: ['Entrenar🏋🏽‍♂️', 'Jugar videojuegos🎮', 'Ver series📺', 'Escuchar musica🎧'],
     correctAnswerIndex: 0,
   },
 ];

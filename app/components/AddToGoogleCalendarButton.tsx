@@ -10,8 +10,8 @@ export const AddToGoogleCalendarButton = ({ invitationInfo }: Props) => {
   const location = invitationInfo.location;
   const description = invitationInfo.additionalInfo;
 
-  const formattedStartDate = '20241118T140000Z'; // UTC time for 12 PM Argentina time
-  const formattedEndDate = '20241118T230000Z'; // UTC time for 8 PM Argentina time
+  const formattedStartDate = '20241118T130000Z'; // UTC time for 11 AM Argentina time
+  const formattedEndDate = '20241119T010000Z'; // UTC time for 8 PM Argentina time
 
   // Construct Google Calendar event URL
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${formattedStartDate}%2F${formattedEndDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;

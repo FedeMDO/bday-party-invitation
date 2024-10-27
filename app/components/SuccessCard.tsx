@@ -19,7 +19,21 @@ export default function SuccessCard({ invitationInfoPromise, resultPromise }: Pr
   const name = searchParams.get('name');
 
   if (result === false) {
-    return <div>Perdiste, mas suerte el proximo año 😢</div>;
+    return (
+      <>
+        <h1 className="animate-bounce pb-4 text-center text-2xl">Perdiste, mas suerte el proximo año 😢</h1>
+        <p className="pb-2 text-xl">
+          o {/* button style */}
+          <Link
+            type="button"
+            className="rounded-full bg-green-600 px-3 py-1 font-bold hover:bg-green-800"
+            href={`/1${name ? `?name=${name}` : ''}`}
+          >
+            intentalo otra vez
+          </Link>
+        </p>
+      </>
+    );
   }
 
   return (
@@ -31,9 +45,7 @@ export default function SuccessCard({ invitationInfoPromise, resultPromise }: Pr
         <p className="animate-wiggle inline-block bg-gradient-to-r from-red-600 via-green-600 to-blue-600 bg-clip-text text-3xl text-transparent">
           {invitationInfo.date}
         </p>
-        <p className="mb-4">
-          Hora: Desde las {invitationInfo.from} (desalojamos tipo {invitationInfo.to})
-        </p>
+        <p className="mb-4">Hora: Desde las {invitationInfo.from}</p>
         <p className="mb-4">
           Lugar:{' '}
           <Link
