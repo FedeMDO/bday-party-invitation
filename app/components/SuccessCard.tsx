@@ -23,7 +23,7 @@ export default function SuccessCard({ invitationInfoPromise, resultPromise }: Pr
       <>
         <h1 className="animate-bounce pb-4 text-center text-2xl">Perdiste, mas suerte el proximo año 😢</h1>
         <p className="pb-2 text-xl">
-          o sino
+          o sino{' '}
           <Link
             type="button"
             className="text-nowrap rounded-full bg-green-600 px-3 py-1 font-bold hover:bg-green-800"
