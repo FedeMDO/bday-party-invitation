@@ -26,7 +26,7 @@ export default function SuccessCard({ invitationInfoPromise, resultPromise }: Pr
           o {/* button style */}
           <Link
             type="button"
-            className="rounded-full bg-green-600 px-3 py-1 font-bold hover:bg-green-800"
+            className="text-nowrap rounded-full bg-green-600 px-3 py-1 font-bold hover:bg-green-800"
             href={`/1${name ? `?name=${name}` : ''}`}
           >
             intentalo otra vez
